@@ -155,7 +155,7 @@ cols_mini_sud = [colonneminisud1,colonneminisud2,colonneminisud3,colonneminisud4
 cols_mini_nord = [colonnemininord1,colonnemininord2,colonnemininord3,colonnemininord4,colonnemininord5,colonnemininord6,colonnemininord7,colonnemininord8,colonnemininord9]
 cols_mini_west = [colonneminiwest1,colonneminiwest2,colonneminiwest3]
 S = AA(JOIN)([EXT,CENTER,IN] + cols_sud + cols_nord + cols_est + cols_west + cols_small_est + cols_small_west + blocks + cols_centro + cols_mini_sud + cols_mini_nord + cols_mini_west)
-PIANOA = AA(SKELETON(1))(S)
+floor0 = AA(SKELETON(1))(S)
 
 
 
@@ -314,12 +314,12 @@ ucols_mini_sud = [ucolonneminisud1,ucolonneminisud2,ucolonneminisud3,ucolonnemin
 ucols_mini_nord = [ucolonnemininord1,ucolonnemininord2,ucolonnemininord3,ucolonnemininord4,ucolonnemininord5,ucolonnemininord6,ucolonnemininord7,ucolonnemininord8,ucolonnemininord9]
 ucols_mini_west = [ucolonneminiwest1,ucolonneminiwest2,ucolonneminiwest3]
 US = AA(JOIN)( [UEXT] + ucols_sud + ucols_nord + ucols_est + ucols_west + ucols_small_est + ucols_small_west + ublocks + ucols_centro + ucols_mini_sud + ucols_mini_nord + ucols_mini_west)
-PIANO_SUPERIORE = AA(SKELETON(1))(US)
+floor1 = AA(SKELETON(1))(US)
 
 
 
-PIANOB = PIANO_SUPERIORE + PIANOA
+two_and_half_model = floor1 + floor0
 
-VIEW(STRUCT(PIANOB))
+VIEW(STRUCT(two_and_half_model))
 
 
