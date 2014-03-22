@@ -8,6 +8,11 @@ def circle(r):
   return circle0
 
 
+################################################################################################
+################################## GROUND LEVEL #################################################
+################################################################################################
+
+
 border_ext = [[6.08,6.87],[69.51,6.87],[69.51,35.32],[6.08,35.32]]
 border_center = [[6.6,7.38],[68.75,7.38],[68.75,34.57],[6.6,34.57]]
 border_in = [[7.24,7.79],[68.33,7.79],[68.33,34.15],[7.24,34.15]]
@@ -154,13 +159,6 @@ cols_mini_nord = [colonnemininord1,colonnemininord2,colonnemininord3,colonnemini
 cols_mini_west = [colonneminiwest1,colonneminiwest2,colonneminiwest3]
 S = AA(JOIN)([EXT,CENTER,IN] + cols_sud + cols_nord + cols_est + cols_west + cols_small_est + cols_small_west + blocks + cols_centro + cols_mini_sud + cols_mini_nord + cols_mini_west)
 floor0 = AA(SKELETON(1))(S)
-
-
-
-
-
-
-
 
 
 
@@ -311,8 +309,6 @@ ucols_mini_nord = [ucolonnemininord1,ucolonnemininord2,ucolonnemininord3,ucolonn
 ucols_mini_west = [ucolonneminiwest1,ucolonneminiwest2,ucolonneminiwest3]
 US = AA(JOIN)( [UEXT] + ucols_sud + ucols_nord + ucols_est + ucols_west + ucols_small_est + ucols_small_west + ublocks + ucols_centro + ucols_mini_sud + ucols_mini_nord + ucols_mini_west)
 floor1 = AA(SKELETON(1))(US)
-
-
 
 two_and_half_model = floor1 + floor0
 
