@@ -77,6 +77,18 @@ colwestsmall3 = T([1,2])([13.16, 22.35])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
 colwestsmall4 = T([1,2])([13.16, 25.75])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
 colwestsmall5 = T([1,2])([13.16, 28.98])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
 
+block1 = [[16.19,28.33],[16.19,29.87],[59.37,28.34],[59.67,29.87]]
+block2 = [[16.19,11.8],[16.19,13.38],[59.37,11.80],[59.67,13.38]]
+block3 = [[17.56,13.38],[17.56,18.03],[17.85,18.03],[17.85,19.20],[19.33,19.20],[19.33,13.38]]
+BLOCK1 = AA(MK)(block1)
+BLOCK2 = AA(MK)(block2)
+BLOCK3 = AA(MK)(block3)
+
+B1 = JOIN(BLOCK1)
+B2 = AA(JOIN)(BLOCK2)
+B3 = JOIN(BLOCK3)
+
+blocks =[B1,B2]
 cols_sud = [colsud1,colsud2,colsud3,colsud4,colsud5,colsud6,colsud7,colsud8,colsud9,colsud10,colsud11,colsud12,colsud13,colsud14,colsud15]
 cols_nord = [colnord1,colnord2,colnord3,colnord4,colnord5,colnord6,colnord7,colnord8,colnord9,colnord10,colnord11,colnord12,colnord13,colnord14,colnord15]
 cols_est = [colest1,colest2,colest3,colest4,colest5,colest6]
@@ -84,7 +96,7 @@ cols_west = [colwest1,colwest2,colwest3,colwest4,colwest5,colwest6]
 cols_small_est = [colestsmall1,colestsmall2,colestsmall3,colestsmall4,colestsmall5,colestsmall6]
 cols_small_west = [colwestsmall1,colwestsmall2,colwestsmall3,colwestsmall4,colwestsmall5,colwestsmall6]
 
-S = AA(JOIN)([EXT,CENTER,IN] + cols_sud + cols_nord + cols_est + cols_west + cols_small_est + cols_small_west)
+S = AA(JOIN)([EXT,CENTER,IN] + cols_sud + cols_nord + cols_est + cols_west + cols_small_est + cols_small_west + blocks)
 
 
 VIEW(STRUCT(AA(SKELETON(1))(S)))
