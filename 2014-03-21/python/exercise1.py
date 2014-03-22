@@ -155,6 +155,171 @@ cols_mini_sud = [colonneminisud1,colonneminisud2,colonneminisud3,colonneminisud4
 cols_mini_nord = [colonnemininord1,colonnemininord2,colonnemininord3,colonnemininord4,colonnemininord5,colonnemininord6,colonnemininord7,colonnemininord8,colonnemininord9]
 cols_mini_west = [colonneminiwest1,colonneminiwest2,colonneminiwest3]
 S = AA(JOIN)([EXT,CENTER,IN] + cols_sud + cols_nord + cols_est + cols_west + cols_small_est + cols_small_west + blocks + cols_centro + cols_mini_sud + cols_mini_nord + cols_mini_west)
+PIANOA = AA(SKELETON(1))(S)
 
 
-VIEW(STRUCT(AA(SKELETON(1))(S)))
+
+
+
+
+
+
+
+
+################################################################################################
+################################## UPPER LEVEL #################################################
+################################################################################################
+uborder_ext = [[6.08,6.87,10],[69.51,6.87,10],[69.51,35.32,10],[6.08,35.32,10]]
+UEXT = AA(MK)(uborder_ext)
+
+
+ucolsud1 = T([1,2,3])([10.16, 33.02,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolsud2 = T([1,2,3])([14.16, 33.02,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolsud3 = T([1,2,3])([18.16, 33.02,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolsud4 = T([1,2,3])([22.16, 33.02,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolsud5 = T([1,2,3])([26.16, 33.02,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolsud6 = T([1,2,3])([30.16, 33.02,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolsud7 = T([1,2,3])([34.16, 33.02,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolsud8 = T([1,2,3])([38.16, 33.02,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolsud9 = T([1,2,3])([42.16, 33.02,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolsud10 = T([1,2,3])([46.16, 33.02,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolsud11 = T([1,2,3])([50.16, 33.02,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolsud12 = T([1,2,3])([54.16, 33.02,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolsud13 = T([1,2,3])([58.16, 33.02,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolsud14 = T([1,2,3])([62.16, 33.02,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolsud15 = T([1,2,3])([66.16, 33.02,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+
+ucolnord1 = T([1,2,3])([10.16, 8.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolnord2 = T([1,2,3])([14.16, 8.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolnord3 = T([1,2,3])([18.16, 8.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolnord4 = T([1,2,3])([22.16, 8.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolnord5 = T([1,2,3])([26.16, 8.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolnord6 = T([1,2,3])([30.16, 8.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolnord7 = T([1,2,3])([34.16, 8.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolnord8 = T([1,2,3])([38.16, 8.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolnord9 = T([1,2,3])([42.16, 8.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolnord10 = T([1,2,3])([46.16, 8.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolnord11 = T([1,2,3])([50.16, 8.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolnord12 = T([1,2,3])([54.16, 8.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolnord13 = T([1,2,3])([58.16, 8.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolnord14 = T([1,2,3])([62.16, 8.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolnord15 = T([1,2,3])([66.16, 8.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+
+ucolest1 = T([1,2,3])([66.16, 12.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolest2 = T([1,2,3])([66.16, 16.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolest3 = T([1,2,3])([66.16, 20.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolest4 = T([1,2,3])([66.16, 24.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolest5 = T([1,2,3])([66.16, 28.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolest6 = T([1,2,3])([66.16, 8.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+
+ucolestsmall6 = T([1,2,3])([62.68, 12.53,10])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+ucolestsmall1 = T([1,2,3])([62.68, 15.55,10])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+ucolestsmall2 = T([1,2,3])([62.68, 18.95,10])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+ucolestsmall3 = T([1,2,3])([62.68, 22.35,10])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+ucolestsmall4 = T([1,2,3])([62.68, 25.75,10])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+ucolestsmall5 = T([1,2,3])([62.68, 28.98,10])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+
+
+ucolwest1 = T([1,2,3])([10.16, 12.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolwest2 = T([1,2,3])([10.16, 16.85,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolwest3 = T([1,2,3])([10.16, 20.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolwest4 = T([1,2,3])([10.16, 24.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolwest5 = T([1,2,3])([10.16, 28.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+ucolwest6 = T([1,2,3])([10.16, 8.88,10])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+
+ucolwestsmall6 = T([1,2,3])([13.16, 12.53,10])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+ucolwestsmall1 = T([1,2,3])([13.16, 15.55,10])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+ucolwestsmall2 = T([1,2,3])([13.16, 18.95,10])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+ucolwestsmall3 = T([1,2,3])([13.16, 22.35,10])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+ucolwestsmall4 = T([1,2,3])([13.16, 25.75,10])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+ucolwestsmall5 = T([1,2,3])([13.16, 28.98,10])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+
+utravelunga_sud = [[16.19,28.33,10],[16.19,29.87,10],[59.67,28.34,10],[59.67,29.87,10]]
+utravelunga_nord = [[16.19,11.8,10],[16.19,13.38,10],[59.67,11.80,10],[59.67,13.38,10]]
+usupporto_travelunga_nord = [[17.56,13.38,10],[17.56,18.03,10],[19.33,18.03,10],[19.33,13.38,10]]
+ufinale_travelunga_nord = [[17.85,18.03,10],[17.85,19.20,10],[19.33,19.20,10],[19.33,18.03,10]]
+usupporto_travelunga_sud = [[17.56,28.33,10],[17.56,23.68,10],[19.33,23.68,10],[19.33,28.33,10]]
+ufinale_travelunga_sud = [[17.85,23.68,10],[17.85,22.41,10],[19.33,22.41,10],[19.33,23.68,10]]
+utrave_centrale = [[32.12,28.33,10],[33.14,28.33,10],[33.14,13.38,10],[32.12,13.38,10]]
+usupporto_sud_est = [[52.71,28.33,10],[52.71,23.97,10],[54.72,23.97,10],[54.72,28.33,10]]
+ufinale_sud_est = [[54.26,23.97,10],[54.26,22.44,10],[52.71,22.44,10],[52.71,23.97,10]]
+usupporto_nord_est = [[52.71,13.38,10],[52.71,17.73,10],[54.72,17.73,10],[54.72,13.38,10]]
+ufinale_nord_est = [[54.26,17.73,10],[54.26,19.25,10],[52.71,19.25,10],[52.71,17.73,10]]
+
+
+ucolcentro1 = T([1,2,3])([23.38, 23.41,10])(MAP(circle(0.75))(INTERVALS(2*PI)(32)))
+ucolcentro2 = T([1,2,3])([28.50, 23.41,10])(MAP(circle(0.75))(INTERVALS(2*PI)(32)))
+ucolcentro3 = T([1,2,3])([28.50, 18.28,10])(MAP(circle(0.75))(INTERVALS(2*PI)(32)))
+ucolcentro4 = T([1,2,3])([23.38, 18.28,10])(MAP(circle(0.75))(INTERVALS(2*PI)(32)))
+
+ucolonneminisud1 = T([1,2,3])([37.08, 24.31,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonneminisud2 = T([1,2,3])([38.88, 24.31,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonneminisud3 = T([1,2,3])([40.68, 24.31,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonneminisud4 = T([1,2,3])([42.48, 24.31,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonneminisud5 = T([1,2,3])([44.28, 24.31,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonneminisud6 = T([1,2,3])([46.08, 24.31,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonneminisud7 = T([1,2,3])([47.88, 24.31,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonneminisud8 = T([1,2,3])([49.68, 24.31,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonneminisud9 = T([1,2,3])([51.48, 24.31,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+
+ucolonnemininord1 = T([1,2,3])([37.08, 17.41,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonnemininord2 = T([1,2,3])([38.88, 17.41,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonnemininord3 = T([1,2,3])([40.68, 17.41,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonnemininord4 = T([1,2,3])([42.48, 17.41,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonnemininord5 = T([1,2,3])([44.28, 17.41,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonnemininord6 = T([1,2,3])([46.08, 17.41,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonnemininord7 = T([1,2,3])([47.88, 17.41,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonnemininord8 = T([1,2,3])([49.68, 17.41,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonnemininord9 = T([1,2,3])([51.48, 17.41,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+
+ucolonneminiwest1 = T([1,2,3])([35.46, 19,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonneminiwest2 = T([1,2,3])([35.46, 20.8,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+ucolonneminiwest3 = T([1,2,3])([35.46, 22.6,10])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+
+
+UBLOCK1 = AA(MK)(utravelunga_sud)
+UBLOCK2 = AA(MK)(utravelunga_nord)
+UBLOCK3 = AA(MK)(usupporto_travelunga_nord)
+UBLOCK4 = AA(MK)(ufinale_travelunga_nord)
+UBLOCK5 = AA(MK)(usupporto_travelunga_sud)
+UBLOCK6 = AA(MK)(ufinale_travelunga_sud)
+UBLOCK7 = AA(MK)(utrave_centrale)
+UBLOCK8 = AA(MK)(usupporto_sud_est)
+UBLOCK9 = AA(MK)(ufinale_sud_est)
+UBLOCK10 = AA(MK)(usupporto_nord_est)
+UBLOCK11 = AA(MK)(ufinale_nord_est)
+
+UB1 = JOIN(UBLOCK1)
+UB2 = JOIN(UBLOCK2)
+UB3 = JOIN(UBLOCK3)
+UB4 = JOIN(UBLOCK4)
+UB5 = JOIN(UBLOCK5)
+UB6 = JOIN(UBLOCK6)
+UB7 = JOIN(UBLOCK7)
+UB8 = JOIN(UBLOCK8)
+UB9 = JOIN(UBLOCK9)
+UB10 = JOIN(UBLOCK10)
+UB11 = JOIN(UBLOCK11)
+
+
+ublocks =[UB1,UB2,UB3,UB4,UB5,UB6,UB7,UB8,UB9,UB10,UB11]
+ucols_sud = [ucolsud1,ucolsud2,ucolsud3,ucolsud4,ucolsud5,ucolsud6,ucolsud7,ucolsud8,ucolsud9,ucolsud10,ucolsud11,ucolsud12,ucolsud13,ucolsud14,ucolsud15]
+ucols_nord = [ucolnord1,ucolnord2,ucolnord3,ucolnord4,ucolnord5,ucolnord6,ucolnord7,ucolnord8,ucolnord9,ucolnord10,ucolnord11,ucolnord12,ucolnord13,ucolnord14,ucolnord15]
+ucols_est = [ucolest1,ucolest2,ucolest3,ucolest4,ucolest5,ucolest6]
+ucols_west = [ucolwest1,ucolwest2,ucolwest3,ucolwest4,ucolwest5,ucolwest6]
+ucols_small_est = [ucolestsmall1,ucolestsmall2,ucolestsmall3,ucolestsmall4,ucolestsmall5,ucolestsmall6]
+ucols_small_west = [ucolwestsmall1,ucolwestsmall2,ucolwestsmall3,ucolwestsmall4,ucolwestsmall5,ucolwestsmall6]
+ucols_centro = [ucolcentro1,ucolcentro2,ucolcentro3,ucolcentro4]
+ucols_mini_sud = [ucolonneminisud1,ucolonneminisud2,ucolonneminisud3,ucolonneminisud4,ucolonneminisud5,ucolonneminisud6,ucolonneminisud7,ucolonneminisud8,ucolonneminisud9]
+ucols_mini_nord = [ucolonnemininord1,ucolonnemininord2,ucolonnemininord3,ucolonnemininord4,ucolonnemininord5,ucolonnemininord6,ucolonnemininord7,ucolonnemininord8,ucolonnemininord9]
+ucols_mini_west = [ucolonneminiwest1,ucolonneminiwest2,ucolonneminiwest3]
+US = AA(JOIN)( [UEXT] + ucols_sud + ucols_nord + ucols_est + ucols_west + ucols_small_est + ucols_small_west + ublocks + ucols_centro + ucols_mini_sud + ucols_mini_nord + ucols_mini_west)
+PIANO_SUPERIORE = AA(SKELETON(1))(US)
+
+
+
+PIANOB = PIANO_SUPERIORE + PIANOA
+
+VIEW(STRUCT(PIANOB))
+
+
