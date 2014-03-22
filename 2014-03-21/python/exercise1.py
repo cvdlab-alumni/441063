@@ -55,19 +55,36 @@ colest4 = T([1,2])([66.16, 24.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
 colest5 = T([1,2])([66.16, 28.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
 colest6 = T([1,2])([66.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
 
+colestsmall6 = T([1,2])([62.68, 12.53])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+colestsmall1 = T([1,2])([62.68, 15.55])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+colestsmall2 = T([1,2])([62.68, 18.95])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+colestsmall3 = T([1,2])([62.68, 22.35])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+colestsmall4 = T([1,2])([62.68, 25.75])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+colestsmall5 = T([1,2])([62.68, 28.98])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+
 
 colwest1 = T([1,2])([10.16, 12.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
-colwest2 = T([1,2])([10.16, 16.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+colwest2 = T([1,2])([10.16, 16.85])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
 colwest3 = T([1,2])([10.16, 20.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
 colwest4 = T([1,2])([10.16, 24.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
 colwest5 = T([1,2])([10.16, 28.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
 colwest6 = T([1,2])([10.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
 
+colwestsmall6 = T([1,2])([13.16, 12.53])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+colwestsmall1 = T([1,2])([13.16, 15.55])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+colwestsmall2 = T([1,2])([13.16, 18.95])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+colwestsmall3 = T([1,2])([13.16, 22.35])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+colwestsmall4 = T([1,2])([13.16, 25.75])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+colwestsmall5 = T([1,2])([13.16, 28.98])(MAP(circle(0.73))(INTERVALS(2*PI)(32)))
+
 cols_sud = [colsud1,colsud2,colsud3,colsud4,colsud5,colsud6,colsud7,colsud8,colsud9,colsud10,colsud11,colsud12,colsud13,colsud14,colsud15]
 cols_nord = [colnord1,colnord2,colnord3,colnord4,colnord5,colnord6,colnord7,colnord8,colnord9,colnord10,colnord11,colnord12,colnord13,colnord14,colnord15]
 cols_est = [colest1,colest2,colest3,colest4,colest5,colest6]
 cols_west = [colwest1,colwest2,colwest3,colwest4,colwest5,colwest6]
-S = AA(JOIN)([EXT,CENTER,IN] + cols_sud + cols_nord + cols_est + cols_west)
+cols_small_est = [colestsmall1,colestsmall2,colestsmall3,colestsmall4,colestsmall5,colestsmall6]
+cols_small_west = [colwestsmall1,colwestsmall2,colwestsmall3,colwestsmall4,colwestsmall5,colwestsmall6]
+
+S = AA(JOIN)([EXT,CENTER,IN] + cols_sud + cols_nord + cols_est + cols_west + cols_small_est + cols_small_west)
 
 
 VIEW(STRUCT(AA(SKELETON(1))(S)))
