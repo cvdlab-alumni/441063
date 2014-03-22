@@ -118,6 +118,30 @@ colcentro2 = T([1,2])([28.50, 23.41])(MAP(circle(0.75))(INTERVALS(2*PI)(32)))
 colcentro3 = T([1,2])([28.50, 18.28])(MAP(circle(0.75))(INTERVALS(2*PI)(32)))
 colcentro4 = T([1,2])([23.38, 18.28])(MAP(circle(0.75))(INTERVALS(2*PI)(32)))
 
+colonneminisud1 = T([1,2])([37.08, 24.31])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonneminisud2 = T([1,2])([38.88, 24.31])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonneminisud3 = T([1,2])([40.68, 24.31])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonneminisud4 = T([1,2])([42.48, 24.31])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonneminisud5 = T([1,2])([44.28, 24.31])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonneminisud6 = T([1,2])([46.08, 24.31])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonneminisud7 = T([1,2])([47.88, 24.31])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonneminisud8 = T([1,2])([49.68, 24.31])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonneminisud9 = T([1,2])([51.48, 24.31])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+
+colonnemininord1 = T([1,2])([37.08, 17.41])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonnemininord2 = T([1,2])([38.88, 17.41])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonnemininord3 = T([1,2])([40.68, 17.41])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonnemininord4 = T([1,2])([42.48, 17.41])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonnemininord5 = T([1,2])([44.28, 17.41])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonnemininord6 = T([1,2])([46.08, 17.41])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonnemininord7 = T([1,2])([47.88, 17.41])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonnemininord8 = T([1,2])([49.68, 17.41])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonnemininord9 = T([1,2])([51.48, 17.41])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+
+colonneminiwest1 = T([1,2])([35.46, 19])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonneminiwest2 = T([1,2])([35.46, 20.8])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+colonneminiwest3 = T([1,2])([35.46, 22.6])(MAP(circle(0.50))(INTERVALS(2*PI)(32)))
+
 
 blocks =[B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,B11]
 cols_sud = [colsud1,colsud2,colsud3,colsud4,colsud5,colsud6,colsud7,colsud8,colsud9,colsud10,colsud11,colsud12,colsud13,colsud14,colsud15]
@@ -127,8 +151,10 @@ cols_west = [colwest1,colwest2,colwest3,colwest4,colwest5,colwest6]
 cols_small_est = [colestsmall1,colestsmall2,colestsmall3,colestsmall4,colestsmall5,colestsmall6]
 cols_small_west = [colwestsmall1,colwestsmall2,colwestsmall3,colwestsmall4,colwestsmall5,colwestsmall6]
 cols_centro = [colcentro1,colcentro2,colcentro3,colcentro4]
-
-S = AA(JOIN)([EXT,CENTER,IN] + cols_sud + cols_nord + cols_est + cols_west + cols_small_est + cols_small_west + blocks + cols_centro)
+cols_mini_sud = [colonneminisud1,colonneminisud2,colonneminisud3,colonneminisud4,colonneminisud5,colonneminisud6,colonneminisud7,colonneminisud8,colonneminisud9]
+cols_mini_nord = [colonnemininord1,colonnemininord2,colonnemininord3,colonnemininord4,colonnemininord5,colonnemininord6,colonnemininord7,colonnemininord8,colonnemininord9]
+cols_mini_west = [colonneminiwest1,colonneminiwest2,colonneminiwest3]
+S = AA(JOIN)([EXT,CENTER,IN] + cols_sud + cols_nord + cols_est + cols_west + cols_small_est + cols_small_west + blocks + cols_centro + cols_mini_sud + cols_mini_nord + cols_mini_west)
 
 
 VIEW(STRUCT(AA(SKELETON(1))(S)))
