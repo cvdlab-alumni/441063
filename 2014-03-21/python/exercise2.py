@@ -73,44 +73,46 @@ COLVERNORD14 = AA(MK)(colvernord14)
 COLVERNORD15 = AA(MK)(colvernord15)
 
 
+colverest1 = [[66.16,8.05],[66.16,9.71],[66.16,8.266,10],[66.16,9.494,10]]
+colverest2 = [[66.16,12.05],[66.16,13.71],[66.16,12.266,10],[66.16,13.494,10]]
+colverest3 = [[66.16,16.05],[66.16,17.71],[66.16,16.266,10],[66.16,17.494,10]]
+colverest4 = [[66.16,20.05],[66.16,21.71],[66.16,20.266,10],[66.16,21.494,10]]
+colverest5 = [[66.16,24.05],[66.16,25.71],[66.16,24.266,10],[66.16,25.494,10]]
+colverest6 = [[66.16,28.05],[66.16,29.71],[66.16,28.266,10],[66.16,29.494,10]]
+
+COLVEREST1 = AA(MK)(colverest1)
+COLVEREST2 = AA(MK)(colverest2)
+COLVEREST3 = AA(MK)(colverest3)
+COLVEREST4 = AA(MK)(colverest4)
+COLVEREST5 = AA(MK)(colverest5)
+COLVEREST6 = AA(MK)(colverest6)
+
 COLS_VERT_SUD = [COLVERSUD1,COLVERSUD2,COLVERSUD3,COLVERSUD4,COLVERSUD5,COLVERSUD6,COLVERSUD7,COLVERSUD8,COLVERSUD9,COLVERSUD10,COLVERSUD11,COLVERSUD12,COLVERSUD13,COLVERSUD14,COLVERSUD15]
 COLS_VERT_NORD = [COLVERNORD1,COLVERNORD2,COLVERNORD3,COLVERNORD4,COLVERNORD5,COLVERNORD6,COLVERNORD7,COLVERNORD8,COLVERNORD9,COLVERNORD10,COLVERNORD11,COLVERNORD12,COLVERNORD13,COLVERNORD14,COLVERNORD15]
+COLS_VERT_EAST = [COLVEREST1,COLVEREST2,COLVEREST3,COLVEREST4,COLVEREST5,COLVEREST6]
+
 SOUTH = AA(JOIN)(COLS_VERT_SUD)
 south = AA(SKELETON(1))(SOUTH)
 NORTH = AA(JOIN)(COLS_VERT_NORD)
 north = AA(SKELETON(1))(NORTH)
-VIEW(STRUCT(south + north))
+EAST = AA(JOIN)(COLS_VERT_EAST)
+east = AA(SKELETON(1))(EAST) 
+VIEW(STRUCT(south + north + east))
 
 #########TEST
-colnord1 = T([1,2])([10.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
-colnord2 = T([1,2])([14.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
-colnord3 = T([1,2])([18.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
-colnord4 = T([1,2])([22.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
-colnord5 = T([1,2])([26.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
-colnord6 = T([1,2])([30.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
-colnord7 = T([1,2])([34.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
-colnord8 = T([1,2])([38.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
-colnord9 = T([1,2])([42.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
-colnord10 = T([1,2])([46.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
-colnord11 = T([1,2])([50.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
-colnord12 = T([1,2])([54.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
-colnord13 = T([1,2])([58.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
-colnord14 = T([1,2])([62.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
-colnord15 = T([1,2])([66.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
 
-ucolnord1 = T([1,2,3])([10.16, 8.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
-ucolnord2 = T([1,2,3])([14.16, 8.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
-ucolnord3 = T([1,2,3])([18.16, 8.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
-ucolnord4 = T([1,2,3])([22.16, 8.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
-ucolnord5 = T([1,2,3])([26.16, 8.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
-ucolnord6 = T([1,2,3])([30.16, 8.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
-ucolnord7 = T([1,2,3])([34.16, 8.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
-ucolnord8 = T([1,2,3])([38.16, 8.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
-ucolnord9 = T([1,2,3])([42.16, 8.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
-ucolnord10 = T([1,2,3])([46.16, 8.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
-ucolnord11 = T([1,2,3])([50.16, 8.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
-ucolnord12 = T([1,2,3])([54.16, 8.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
-ucolnord13 = T([1,2,3])([58.16, 8.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
-ucolnord14 = T([1,2,3])([62.16, 8.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
-ucolnord15 = T([1,2,3])([66.16, 8.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
+colest1 = T([1,2])([66.16, 12.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+colest2 = T([1,2])([66.16, 16.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+colest3 = T([1,2])([66.16, 20.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+colest4 = T([1,2])([66.16, 24.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+colest5 = T([1,2])([66.16, 28.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+colest6 = T([1,2])([66.16, 8.88])(MAP(circle(0.83))(INTERVALS(2*PI)(32)))
+
+ucolest1 = T([1,2,3])([66.16, 12.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
+ucolest2 = T([1,2,3])([66.16, 16.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
+ucolest3 = T([1,2,3])([66.16, 20.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
+ucolest4 = T([1,2,3])([66.16, 24.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
+ucolest5 = T([1,2,3])([66.16, 28.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
+ucolest6 = T([1,2,3])([66.16, 8.88,10])(MAP(circle(0.614))(INTERVALS(2*PI)(32)))
+
 
