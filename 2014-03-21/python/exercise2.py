@@ -431,5 +431,7 @@ east = AA(SKELETON(1))(EAST)
 WEST = AA(JOIN)(COLS_VERT_WEST)
 west = AA(SKELETON(1))(WEST)
 
-VIEW(STRUCT(south + north + east + west + two_and_half_model))
+mock_up_3D = STRUCT(south + north + east + west + two_and_half_model)
+
+VIEW(mock_up_3D)
 
