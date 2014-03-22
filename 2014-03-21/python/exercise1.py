@@ -83,6 +83,11 @@ supporto_travelunga_nord = [[17.56,13.38],[17.56,18.03],[19.33,18.03],[19.33,13.
 finale_travelunga_nord = [[17.85,18.03],[17.85,19.20],[19.33,19.20],[19.33,18.03]]
 supporto_travelunga_sud = [[17.56,28.33],[17.56,23.68],[19.33,23.68],[19.33,28.33]]
 finale_travelunga_sud = [[17.85,23.68],[17.85,22.41],[19.33,22.41],[19.33,23.68]]
+trave_centrale = [[32.12,28.33],[33.14,28.33],[33.14,13.38],[32.12,13.38]]
+supporto_sud_est = [[52.71,28.33],[52.71,23.97],[54.72,23.97],[54.72,28.33]]
+finale_sud_est = [[54.26,23.97],[54.26,22.44],[52.71,22.44],[52.71,23.97]]
+supporto_nord_est = [[52.71,13.38],[52.71,17.73],[54.72,17.73],[54.72,13.38]]
+finale_nord_est = [[54.26,17.73],[54.26,19.25],[52.71,19.25],[52.71,17.73]]
 
 BLOCK1 = AA(MK)(travelunga_sud)
 BLOCK2 = AA(MK)(travelunga_nord)
@@ -90,6 +95,11 @@ BLOCK3 = AA(MK)(supporto_travelunga_nord)
 BLOCK4 = AA(MK)(finale_travelunga_nord)
 BLOCK5 = AA(MK)(supporto_travelunga_sud)
 BLOCK6 = AA(MK)(finale_travelunga_sud)
+BLOCK7 = AA(MK)(trave_centrale)
+BLOCK8 = AA(MK)(supporto_sud_est)
+BLOCK9 = AA(MK)(finale_sud_est)
+BLOCK10 = AA(MK)(supporto_nord_est)
+BLOCK11 = AA(MK)(finale_nord_est)
 
 B1 = JOIN(BLOCK1)
 B2 = JOIN(BLOCK2)
@@ -97,15 +107,28 @@ B3 = JOIN(BLOCK3)
 B4 = JOIN(BLOCK4)
 B5 = JOIN(BLOCK5)
 B6 = JOIN(BLOCK6)
-blocks =[B1,B2,B3,B4,B5,B6]
+B7 = JOIN(BLOCK7)
+B8 = JOIN(BLOCK8)
+B9 = JOIN(BLOCK9)
+B10 = JOIN(BLOCK10)
+B11 = JOIN(BLOCK11)
+
+colcentro1 = T([1,2])([23.38, 23.41])(MAP(circle(0.75))(INTERVALS(2*PI)(32)))
+colcentro2 = T([1,2])([28.50, 23.41])(MAP(circle(0.75))(INTERVALS(2*PI)(32)))
+colcentro3 = T([1,2])([28.50, 18.28])(MAP(circle(0.75))(INTERVALS(2*PI)(32)))
+colcentro4 = T([1,2])([23.38, 18.28])(MAP(circle(0.75))(INTERVALS(2*PI)(32)))
+
+
+blocks =[B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,B11]
 cols_sud = [colsud1,colsud2,colsud3,colsud4,colsud5,colsud6,colsud7,colsud8,colsud9,colsud10,colsud11,colsud12,colsud13,colsud14,colsud15]
 cols_nord = [colnord1,colnord2,colnord3,colnord4,colnord5,colnord6,colnord7,colnord8,colnord9,colnord10,colnord11,colnord12,colnord13,colnord14,colnord15]
 cols_est = [colest1,colest2,colest3,colest4,colest5,colest6]
 cols_west = [colwest1,colwest2,colwest3,colwest4,colwest5,colwest6]
 cols_small_est = [colestsmall1,colestsmall2,colestsmall3,colestsmall4,colestsmall5,colestsmall6]
 cols_small_west = [colwestsmall1,colwestsmall2,colwestsmall3,colwestsmall4,colwestsmall5,colwestsmall6]
+cols_centro = [colcentro1,colcentro2,colcentro3,colcentro4]
 
-S = AA(JOIN)([EXT,CENTER,IN] + cols_sud + cols_nord + cols_est + cols_west + cols_small_est + cols_small_west + blocks)
+S = AA(JOIN)([EXT,CENTER,IN] + cols_sud + cols_nord + cols_est + cols_west + cols_small_est + cols_small_west + blocks + cols_centro)
 
 
 VIEW(STRUCT(AA(SKELETON(1))(S)))
